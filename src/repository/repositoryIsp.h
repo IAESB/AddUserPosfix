@@ -1,0 +1,172 @@
+#ifndef REPOSITORYIsp_H
+#define REPOSITORYIsp_H
+#include <soci/soci.h>
+#include <typeinfo>
+#include "apsinstancesrepository.h"
+#include "apsinstancessettingsrepository.h"
+#include "apspackagesrepository.h"
+#include "apssettingsrepository.h"
+#include "attemptsloginrepository.h"
+#include "clientrepository.h"
+#include "clientcirclerepository.h"
+#include "clientmessagetemplaterepository.h"
+#include "clienttemplaterepository.h"
+#include "clienttemplateassignedrepository.h"
+#include "countryrepository.h"
+#include "cronrepository.h"
+#include "directivesnippetsrepository.h"
+#include "dnsrrrepository.h"
+#include "dnsslaverepository.h"
+#include "dnssoarepository.h"
+#include "dnstemplaterepository.h"
+#include "domainrepository.h"
+#include "firewallrepository.h"
+#include "ftpuserrepository.h"
+#include "helpfaqrepository.h"
+#include "helpfaqsectionsrepository.h"
+#include "iptablesrepository.h"
+#include "mailaccessrepository.h"
+#include "mailbackuprepository.h"
+#include "mailcontentfilterrepository.h"
+#include "maildomainrepository.h"
+#include "mailforwardingrepository.h"
+#include "mailgetrepository.h"
+#include "mailmailinglistrepository.h"
+#include "mailrelayrecipientrepository.h"
+#include "mailtrafficrepository.h"
+#include "mailtransportrepository.h"
+#include "mailuserrepository.h"
+#include "mailuserfilterrepository.h"
+#include "monitordatarepository.h"
+#include "openvziprepository.h"
+#include "openvzostemplaterepository.h"
+#include "openvztemplaterepository.h"
+#include "openvztrafficrepository.h"
+#include "openvzvmrepository.h"
+#include "remotesessionrepository.h"
+#include "remoteuserrepository.h"
+#include "serverrepository.h"
+#include "serveriprepository.h"
+#include "serverphprepository.h"
+#include "shelluserrepository.h"
+#include "softwarepackagerepository.h"
+#include "softwarereporepository.h"
+#include "softwareupdaterepository.h"
+#include "softwareupdateinstrepository.h"
+#include "spamfilterpolicyrepository.h"
+#include "spamfilterusersrepository.h"
+#include "spamfilterwblistrepository.h"
+#include "supportmessagerepository.h"
+#include "sysconfigrepository.h"
+#include "syscronrepository.h"
+#include "sysdatalogrepository.h"
+#include "sysdbsyncrepository.h"
+#include "sysfilesyncrepository.h"
+#include "sysgrouprepository.h"
+#include "sysinirepository.h"
+#include "syslogrepository.h"
+#include "sysremoteactionrepository.h"
+#include "syssessionrepository.h"
+#include "systhemerepository.h"
+#include "sysuserrepository.h"
+#include "webbackuprepository.h"
+#include "webdatabaserepository.h"
+#include "webdatabaseuserrepository.h"
+#include "webdomainrepository.h"
+#include "webfolderrepository.h"
+#include "webfolderuserrepository.h"
+#include "webtrafficrepository.h"
+#include "webdavuserrepository.h"
+
+class RepositoryIsp
+{
+	soci::session dataBase;
+	ApsInstancesRepository apsinstances;
+	ApsInstancesSettingsRepository apsinstancessettings;
+	ApsPackagesRepository apspackages;
+	ApsSettingsRepository apssettings;
+	AttemptsLoginRepository attemptslogin;
+	ClientRepository client;
+	ClientCircleRepository clientcircle;
+	ClientMessageTemplateRepository clientmessagetemplate;
+	ClientTemplateRepository clienttemplate;
+	ClientTemplateAssignedRepository clienttemplateassigned;
+	CountryRepository country;
+	CronRepository cron;
+	DirectiveSnippetsRepository directivesnippets;
+	DnsRrRepository dnsrr;
+	DnsSlaveRepository dnsslave;
+	DnsSoaRepository dnssoa;
+	DnsTemplateRepository dnstemplate;
+	DomainRepository domain;
+	FirewallRepository firewall;
+	FtpUserRepository ftpuser;
+	HelpFaqRepository helpfaq;
+	HelpFaqSectionsRepository helpfaqsections;
+	IptablesRepository iptables;
+	MailAccessRepository mailaccess;
+	MailBackupRepository mailbackup;
+	MailContentFilterRepository mailcontentfilter;
+	MailDomainRepository maildomain;
+	MailForwardingRepository mailforwarding;
+	MailGetRepository mailget;
+	MailMailinglistRepository mailmailinglist;
+	MailRelayRecipientRepository mailrelayrecipient;
+	MailTrafficRepository mailtraffic;
+	MailTransportRepository mailtransport;
+	MailUserRepository mailuser;
+	MailUserFilterRepository mailuserfilter;
+	MonitorDataRepository monitordata;
+	OpenvzIpRepository openvzip;
+	OpenvzOstemplateRepository openvzostemplate;
+	OpenvzTemplateRepository openvztemplate;
+	OpenvzTrafficRepository openvztraffic;
+	OpenvzVmRepository openvzvm;
+	RemoteSessionRepository remotesession;
+	RemoteUserRepository remoteuser;
+	ServerRepository server;
+	ServerIpRepository serverip;
+	ServerPhpRepository serverphp;
+	ShellUserRepository shelluser;
+	SoftwarePackageRepository softwarepackage;
+	SoftwareRepoRepository softwarerepo;
+	SoftwareUpdateRepository softwareupdate;
+	SoftwareUpdateInstRepository softwareupdateinst;
+	SpamfilterPolicyRepository spamfilterpolicy;
+	SpamfilterUsersRepository spamfilterusers;
+	SpamfilterWblistRepository spamfilterwblist;
+	SupportMessageRepository supportmessage;
+	SysConfigRepository sysconfig;
+	SysCronRepository syscron;
+	SysDatalogRepository sysdatalog;
+	SysDbsyncRepository sysdbsync;
+	SysFilesyncRepository sysfilesync;
+	SysGroupRepository sysgroup;
+	SysIniRepository sysini;
+	SysLogRepository syslog;
+	SysRemoteactionRepository sysremoteaction;
+	SysSessionRepository syssession;
+	SysThemeRepository systheme;
+	SysUserRepository sysuser;
+	WebBackupRepository webbackup;
+	WebDatabaseRepository webdatabase;
+	WebDatabaseUserRepository webdatabaseuser;
+	WebDomainRepository webdomain;
+	WebFolderRepository webfolder;
+	WebFolderUserRepository webfolderuser;
+	WebTrafficRepository webtraffic;
+	WebdavUserRepository webdavuser;
+public:
+	RepositoryIsp();
+
+	void open(const std::string& connectStringDataBase);
+	template<class R, class T> R select(const T& obj);
+	template<class T> T select(const string& where="");
+	template<class T> int insert(const T& obj);
+	template<class T> void update(const T& obj);
+	template<class T> void update(const T& oldObj, const T& newObj);
+	template<class T> void remove(const T& obj);
+
+};
+
+#endif // REPOSITORYIsp_H
